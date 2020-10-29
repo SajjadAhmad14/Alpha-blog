@@ -1,14 +1,8 @@
-<%# <form action = 'articles' method = 'post'>
-  <label for = 'title'>Title:</label><br>
-  <input type = 'text' name = 'title'><br>
-  <label for = 'description'>Description:</label><br>
-  <input type = 'text' name = 'description'><br>
-  <input type = 'submit' value = 'Submit'>
-</form> %>
-<%= form_with(url: "/articles", method: "post") do %>
-  <%= label_tag(:title, "Title:") %><br>
-  <%= text_field_tag(:title) %><br>
-  <%= label_tag(:description, "Description:") %><br>
-  <%= text_field_tag(:description) %><br>
-  <%= submit_tag("Submit") %>
+<h1>Create a new Article</h1>
+<%= form_with scope: :article, url: articles_path, local: true do |f|%>
+  <%= f.label :title%><br>
+  <%= f.text_field :title %><br>
+  <%= f.label :description %><br>
+  <%= f.text_area :description%><br>
+  <%= submit_tag %>
 <% end %>
