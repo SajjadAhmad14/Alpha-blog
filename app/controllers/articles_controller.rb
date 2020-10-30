@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
-
+  before_action :find, only:[:show, :edit, :update, :destroy]
   def show
-    @article = find
+
   end
 
   def index
@@ -23,11 +23,10 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = find
+    
   end
 
   def update
-    @article = find
     if @article.update(article_params)
       flash[:notice] = 'Article updated successfully!'
       redirect_to @article
@@ -37,7 +36,6 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = find
     @article.destroy
     redirect_to articles_path
   end
@@ -48,6 +46,6 @@ class ArticlesController < ApplicationController
   end
 
   def find
-    Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 end
