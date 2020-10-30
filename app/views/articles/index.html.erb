@@ -9,7 +9,13 @@
         Discription
       </th>
       <th>
-        Action
+        Show
+      </th>
+      <th>
+        Edit
+      </th>
+      <th>
+        Delete
       </th>
     </tr>
     <thead>
@@ -19,9 +25,11 @@
             <td><%= article.title %></td>
             <td><%= article.description %></td>
             <td><%= link_to "show", article %>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-      <br>
-      <%= link_to "Create new Article", new_article_path %>
+              <td><%= link_to "edit", edit_article_path(article) %>
+                <td><%= link_to "delete", article_path(article), method: :delete %>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <br>
+          <%= link_to "Create new Article", new_article_path %>
