@@ -1,4 +1,11 @@
 <h1>Create a new Article</h1>
+<% if @article.id == nil %>
+  <% @article.errors.full_messages.each do |error| %>
+    <ul>
+      <li><%= error %></li>
+    </ul>
+  <% end %>
+<% end %>
 <%= form_with scope: :article, url: articles_path, local: true do |f|%>
   <%= f.label :title%><br>
   <%= f.text_field :title %><br>
