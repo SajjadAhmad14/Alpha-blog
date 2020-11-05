@@ -2,8 +2,14 @@
 
 $primary-color: #000;
 $secondary-color: #fff;
+
 .navbar.navbar-dark {
   background-color: $primary-color;
+}
+
+#logo {
+  text-transform: uppercase;
+  font-size: x-large;
 }
 
 body {
@@ -15,7 +21,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: $secondary-color;
- 
+
 }
 
 footer {
