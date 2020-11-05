@@ -1,7 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 $primary-color: #000;
-
+$secondary-color: #fff;
 .navbar.navbar-dark {
   background-color: $primary-color;
 }
@@ -14,6 +14,23 @@ body {
   background-image: url("bg-jumbotron.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff
+  color: $secondary-color;
  
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $primary-color;
+  color: $secondary-color;
+  position: fixed;
+  height: 50px;
+  bottom: 10px;
+  left: 0px;
+  right: 0px;
+}
+
+footer span {
+  color: #28A745;
 }
