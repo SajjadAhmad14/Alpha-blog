@@ -1,1 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap';
+
+$primary-color: #000;
+.navbar.navbar-dark{
+  background-color: $primary-color;
+}
