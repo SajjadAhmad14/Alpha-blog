@@ -1,6 +1,20 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 $primary-color: #000;
-.navbar.navbar-dark{
+
+.navbar.navbar-dark {
   background-color: $primary-color;
+}
+
+body {
+  background-color: #c0c0c0;
+}
+
+.jumbotron {
+  background-image: url("bg-jumbotron.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff
+ 
 }
