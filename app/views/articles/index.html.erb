@@ -1,4 +1,3 @@
-      
 <h1 class = "text-center">All Articles</h1>
 <% @articles.each do |article| %>
   <div class="card text-center w-50 mx-auto">
@@ -6,7 +5,7 @@
       <p>By Sajjad Ahmad</p>
     </div>
     <div class="card-body">
-      <h5 class="card-title"><%= article.title %></h5>
+      <h5 class="card-title"><%= link_to article.title, article, class: 'text-success' %></h5>
       <p class="card-text"><%= article.description %></p>
       <%= link_to "View", article, class: 'btn btn-outline-success' %>
       <%= link_to "Edit", edit_article_path(article), class: 'btn btn-outline-primary' %>
@@ -18,5 +17,3 @@
   </div>
   <br>
 <% end %>
-<br>
-<%= link_to "Create new Article", new_article_path %><br>
