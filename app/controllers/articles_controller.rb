@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :find, only:[:show, :edit, :update, :destroy]
+  before_action :find_user, only:[:show, :edit, :update, :destroy]
   def show
 
   end
@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :description)
   end
 
-  def find
+  def find_user
     @article = Article.find(params[:id])
   end
 end

@@ -5,10 +5,12 @@
     </ul>
   <% end %>
 <% end %>
-<%= form_with(model: @article, local: true)  do |f|%>
-  <%= f.label :title%><br>
-  <%= f.text_field :title %><br>
-  <%= f.label :description %><br>
-  <%= f.text_area :description%><br>
+<%= form_with(model: @article, local: true, class: 'col-5 container bg-info')  do |f|%>
+  <div class="mb-3">
+    <%= f.label :title, class: "form-label" %><br>
+    <%= f.text_field :title, class: "form-control" %><br>
+    <%= f.label :description, class: "form-label" %><br>
+    <%= f.text_area :description, class: "form-control rows = '3'" %><br>
+  </div>
   <%= submit_tag %>
 <% end %>
